@@ -73,12 +73,6 @@ The template is parametrized so that it can be configured with additional resour
 
 ## Getting Started
 
-Note: this repository is not meant to be cloned, but to be consumed as a template in your own project:
-
-```bash
-azd init --template Azure-Samples/ai-foundry-starter-basic
-```
-
 ### Prerequisites
 
 * Install [azd](https://aka.ms/install-azd)
@@ -88,27 +82,21 @@ azd init --template Azure-Samples/ai-foundry-starter-basic
 
 ### Quickstart
 
-1. Bring down the template code:
+1. Initialize the project from the template:
 
     ```shell
-    azd init --template Azure-Samples/ai-foundry-starter-basic
+    azd init -t therealjohn/agent-with-local-tools
     ```
 
-    This will perform a git clone
+    You will be prompted to enter an environment name. This is used to create a resource group and resources in Azure, and helps distinguish this deployment from others. Use a short, descriptive, and unique name (e.g. `agent-with-local-tools-dev`).
 
-2. Sign into your Azure account:
+2. Provision and deploy the application:
 
     ```shell
-    azd auth login
+    azd up
     ```
 
-3. Download a sample agent from GitHub:
-
-    ```shell
-    azd ai agent init -m <repo-path-to-agent.yaml>
-    ```
-
-You'll find agent samples in the [`foundry-samples` repo](https://github.com/microsoft-foundry/foundry-samples/tree/main/samples/python/hosted-agents).
+    You will be prompted to select an Azure subscription and a region. Choose the subscription and region that best fits your needs.
 
 ## Guidance
 
