@@ -18,8 +18,8 @@ from azure.identity.aio import DefaultAzureCredential
 
 # Configure these for your Foundry project
 # Read the explicit variables present in the .env file
-PROJECT_ENDPOINT = os.getenv("PROJECT_ENDPOINT")  # e.g., "https://<project>.services.ai.azure.com"
-MODEL_DEPLOYMENT_NAME = os.getenv("MODEL_DEPLOYMENT_NAME", "gpt-4.1-mini")  # Your model deployment name e.g., "gpt-4.1-mini"
+PROJECT_ENDPOINT = os.getenv("AZURE_AI_PROJECT_ENDPOINT")  # e.g., "https://<project>.services.ai.azure.com"
+MODEL_DEPLOYMENT_NAME = os.getenv("AZURE_AI_MODEL_DEPLOYMENT_NAME", "gpt-4.1-mini")  # Your model deployment name e.g., "gpt-4.1-mini"
 
 
 # Simulated hotel data for Seattle
